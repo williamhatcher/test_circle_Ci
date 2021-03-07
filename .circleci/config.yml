@@ -17,6 +17,7 @@ jobs:
           key: nim-0000
           paths:
             - .nimble
+      - run: mkdir test_results
       - run: nimble test -y -d:useJunit
       - store_test_results:
           path: test_results/
